@@ -9,6 +9,8 @@
   "types": "build/index.d.ts",
   "files": [
     "/bios",
+    "/images",
+    "/examples/nodejs.js",
     "/build/libv86.js",
     "/build/v86_all.js",
     "/build/v86_all.js.map",

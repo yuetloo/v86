@@ -10,7 +10,7 @@ function readfile(path)
 }
 
 var bios = readfile(__dirname + "/../bios/seabios.bin");
-var linux = readfile(__dirname + "/../images/linux4.iso");
+var linux = readfile(__dirname + "/../images/v86-linux.iso");
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
@@ -19,6 +19,7 @@ process.stdin.setEncoding("utf8");
 console.log("Now booting, please stand by ...");
 
 var emulator = new V86({
+    memory_size: 512 * 1024 * 1024,
     bios: { buffer: bios },
     cdrom: { buffer: linux },
     autostart: true,
