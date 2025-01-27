@@ -1,5 +1,20 @@
 {
   "name": "v86",
-  "version": "0",
-  "license": "BSD-2-Clause"
+  "version": "0.0.1",
+  "description": "A bundler-friendly version of the v86 PC Emulator",
+  "license": "BSD-2-Clause",
+  "author": "Yuet Loo Wong <contact@yuetloo.com>",
+  "main": "build/index.cjs",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "/bios",
+    "/build/libv86.js",
+    "/build/v86_all.js",
+    "/build/v86_all.js.map",
+    "/build/*.wasm",
+    "/build/wasm32-unknown-unknown",
+    "v86.css",
+    "LICENSE"
+  ]
 }

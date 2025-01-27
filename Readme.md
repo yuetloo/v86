@@ -1,3 +1,7 @@
+# v86
+Fork of the original version of the v86 PC Emulator for publishing on Npm!
+
+# Original Readme
 [![Join the chat at https://gitter.im/copy/v86](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/copy/v86) or #v86 on [irc.libera.chat](https://libera.chat/)
 
 v86 emulates an x86-compatible CPU and hardware. Machine code is translated to
