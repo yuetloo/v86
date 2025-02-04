@@ -5,13 +5,23 @@
   "license": "BSD-2-Clause",
   "author": "yuetloo <contact@yuetloo.com>",
   "repository": "https://github.com/yuetloo/v86",
+  "type": "module",
   "main": "build/index.cjs",
   "module": "build/index.js",
   "types": "build/index.d.ts",
+  "scripts": {
+    "build": "npm run build-js",
+    "build-wasm": "docker build -t v86build tools/docker/js-build/ && docker run -it --rm -v $(pwd):/v86 v86build",
+    "build-js": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
   "files": [
     "/bios",
     "/images",
     "/examples/nodejs.js",
+    "/build/index.js",
+    "/build/index.cjs",
+    "/build/index.d.ts",
     "/build/libv86.js",
     "/build/v86_all.js",
     "/build/v86_all.js.map",
@@ -19,5 +29,15 @@
     "/build/wasm32-unknown-unknown",
     "v86.css",
     "LICENSE"
-  ]
+  ],
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "^0.27.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.34.2",
+    "rollup-plugin-base64": "^1.0.1",
+    "rollup-plugin-filesize": "^10.0.0"
+  }
 }
