@@ -4,7 +4,10 @@
   "description": "A bundler-friendly version of the v86 PC Emulator",
   "license": "BSD-2-Clause",
   "author": "yuetloo <contact@yuetloo.com>",
-  "repository": "https://github.com/yuetloo/v86",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuetloo/v86.git"
+  },
   "type": "module",
   "main": "build/index.cjs",
   "module": "build/index.js",
@@ -19,6 +22,7 @@
     "/bios",
     "/images",
     "/examples/nodejs.js",
+    "/build/binaries.js",
     "/build/index.js",
     "/build/index.cjs",
     "/build/index.d.ts",
