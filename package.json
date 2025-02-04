@@ -1,6 +1,6 @@
 {
   "name": "@yuetloo/v86",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A bundler-friendly version of the v86 PC Emulator",
   "license": "BSD-2-Clause",
   "author": "yuetloo <contact@yuetloo.com>",
